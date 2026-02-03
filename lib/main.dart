@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           ],
         ),
         drawer: Drawer(
-          child: Text('Yo'),
+          child: Text('This works'),
         ),
       ),
     );
