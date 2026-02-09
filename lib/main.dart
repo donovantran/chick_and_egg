@@ -1,3 +1,4 @@
+import 'package:chickandegg/widgets/app_drawer.dart';
 import 'package:flutter/material.dart';
 import '../widgets/app_top_bar.dart';
 
@@ -14,10 +15,8 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: const Color(0xFF835545),
         appBar: const AppTopBar(title: 'Chick and Egg'),
-        drawer: Drawer(
-          child: Text('This works'),
+        drawer: const AppDrawer(),
         ),
-      ),
-    );
+      );
   }
 }
