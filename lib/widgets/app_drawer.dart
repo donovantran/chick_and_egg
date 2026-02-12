@@ -32,18 +32,33 @@ class AppDrawer extends StatelessWidget {
               padding: EdgeInsets.zero,
               children: [
                 DrawerHeader(
-                  decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.08),
-                  ),
-                  child: const Text(
-                    'Menu',
-                    style: TextStyle(color: Colors.white),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text('NAME OF USER', style: TextStyle(color: Colors.white)),
+                      const SizedBox(height: 20),
+                      const CircleAvatar(radius: 32),
+                      const SizedBox(height: 20),
+
+                    ],
                   ),
                 ),
                 ListTile(
-                  leading: const Icon(Icons.home, color: Colors.white),
+                  leading: const Icon(Icons.house, color: Colors.white),
                   title: const Text('Home', style: TextStyle(color: Colors.white)),
                   onTap: () => Navigator.pop(context),
+                ),
+                ListTile(
+                  leading: const Icon(Icons.collections_bookmark_outlined, color: Colors.white,),
+                  title: const Text('Table of Contents', style: TextStyle(color: Colors.white)),
+                ),
+                ListTile(
+                  leading: const ImageIcon(AssetImage('assets/notes_icon.png'), size: 24, color: Colors.white,),
+                  title: const Text('Notes', style: TextStyle(color: Colors.white),)
+                ),
+                ListTile(
+                  leading: const Icon(Icons.settings, color: Colors.white),
+                  title: const Text('Settings', style: TextStyle(color: Colors.white))
                 ),
               ],
             ),
