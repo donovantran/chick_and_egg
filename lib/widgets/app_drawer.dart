@@ -46,7 +46,10 @@ class AppDrawer extends StatelessWidget {
                 ListTile(
                   leading: const Icon(Icons.house, color: Colors.white),
                   title: const Text('Home', style: TextStyle(color: Colors.white)),
-                  onTap: () => Navigator.pop(context),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.pushNamed(context, '/');
+                  },
                 ),
                 ListTile(
                   leading: const Icon(Icons.collections_bookmark_outlined, color: Colors.white,),
@@ -58,7 +61,11 @@ class AppDrawer extends StatelessWidget {
                 ),
                 ListTile(
                   leading: const Icon(Icons.settings, color: Colors.white),
-                  title: const Text('Settings', style: TextStyle(color: Colors.white))
+                  title: const Text('Settings', style: TextStyle(color: Colors.white)),
+                  onTap: () {
+                    Navigator.pop(context); // close the drawer
+                    Navigator.pushReplacementNamed(context, '/settings'); // go to settings without stacking
+                  },
                 ),
               ],
             ),
