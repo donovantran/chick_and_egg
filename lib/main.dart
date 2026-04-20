@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'widgets/app_drawer.dart';
 import 'widgets/app_top_bar.dart';
 import 'pages/settings_page.dart';
+import 'pages/table_of_contents_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (_) => const HomePage(),
         '/settings': (_) => const SettingsPage(),
+        '/ToC': (_) => const TableOfContentsPage(),
       },
     );
   }
