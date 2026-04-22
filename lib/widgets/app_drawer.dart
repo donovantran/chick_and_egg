@@ -52,12 +52,21 @@ class AppDrawer extends StatelessWidget {
                   },
                 ),
                 ListTile(
-                  leading: const Icon(Icons.collections_bookmark_outlined, color: Colors.white,),
+                  leading: const Icon(Icons.menu_book, color: Colors.white,),
                   title: const Text('Table of Contents', style: TextStyle(color: Colors.white)),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.pushNamed(context,'/ToC');
+                  },
+
                 ),
                 ListTile(
-                  leading: const ImageIcon(AssetImage('assets/notes_icon.png'), size: 24, color: Colors.white,),
-                  title: const Text('Notes', style: TextStyle(color: Colors.white),)
+                  leading: const Icon(Icons.note_alt, color: Colors.white),
+                  title: const Text('Notes', style: TextStyle(color: Colors.white)),
+                  onTap: () {
+                    Navigator.pop(context);
+                    Navigator.pushNamed(context,'/notes');
+                  },
                 ),
                 ListTile(
                   leading: const Icon(Icons.settings, color: Colors.white),

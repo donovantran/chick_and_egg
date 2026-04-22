@@ -6,6 +6,7 @@ import '../widgets/app_top_bar.dart';
 import 'notes_page.dart';
 import 'settings_page.dart';
 import 'table_of_contents_page.dart';
+import 'home_page.dart';
 
 class AppShell extends StatefulWidget {
   const AppShell({super.key, this.startIndex = 0});
@@ -19,6 +20,7 @@ class _AppShellState extends State<AppShell> {
   late int currentIndex;
 
   final pages = const [
+    HomePage(),
     TableOfContentsPage(),
     NotesPage(),
     SettingsPage(),
@@ -49,9 +51,9 @@ class _AppShellState extends State<AppShell> {
           activeColor: Colors.white,
           tabBackgroundColor: Colors.white.withOpacity(0.15),
           tabs: const [
-            GButton(icon: Icons.menu_book, text: 'TOC'),
-            GButton(icon: Icons.note, text: 'Notes'),
-            GButton(icon: Icons.settings, text: 'Settings'),
+            GButton(icon: Icons.house, text: 'Home'),
+            GButton(icon: Icons.menu_book, text: 'Table of Contents'),
+            GButton(icon: Icons.note_alt, text: 'Notes'),
           ],
         ),
       ),
