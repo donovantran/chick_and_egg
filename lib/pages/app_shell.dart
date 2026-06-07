@@ -37,7 +37,11 @@ class _AppShellState extends State<AppShell> {
     return Scaffold(
       backgroundColor: const Color(0xFF835545),
       //appBar: const AppTopBar(title: 'Chick and Egg'),
-      drawer: const AppDrawer(),
+      drawer: AppDrawer(
+
+        onSelectTab: (i) => setState(() => currentIndex = i),
+
+      ),
       body: pages[currentIndex],
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
@@ -54,6 +58,7 @@ class _AppShellState extends State<AppShell> {
             GButton(icon: Icons.house, text: 'Home'),
             GButton(icon: Icons.menu_book, text: 'Table of Contents'),
             GButton(icon: Icons.note_alt, text: 'Notes'),
+            GButton(icon: Icons.settings, text: 'Settings')
           ],
         ),
       ),
