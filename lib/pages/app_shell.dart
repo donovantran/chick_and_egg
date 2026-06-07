@@ -58,7 +58,7 @@ class _AppShellState extends State<AppShell> {
             GButton(icon: Icons.house, text: 'Home'),
             GButton(icon: Icons.menu_book, text: 'Table of Contents'),
             GButton(icon: Icons.note_alt, text: 'Notes'),
-            GButton(icon: Icons.settings, text: 'Settings')
+            GButton(icon: Icons.settings, text: 'Setting')
           ],
         ),
       ),
