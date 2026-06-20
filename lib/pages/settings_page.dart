@@ -7,26 +7,14 @@ class SettingsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: const Color(0xFF835545),
-      appBar: const AppTopBar(title: 'Settings'),
-      drawer: const AppDrawer(),
-      body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Image.asset(
-              'assets/chick.png', // change to your real path
-              width: 180,
-              fit: BoxFit.contain,
-            ),
-            const SizedBox(height: 16),
-            const Text(
-              'settings pages',
-              style: TextStyle(color: Colors.white),
-            ),
-          ],
-        ),
+    return Center(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Image.asset('assets/chick.png', width: 180, fit: BoxFit.contain,),
+          const SizedBox(height: 16,),
+          const Text('settings page', style: TextStyle(color: Colors.white)),
+        ],
       ),
     );
   }
